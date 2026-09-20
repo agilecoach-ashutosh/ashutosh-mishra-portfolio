@@ -525,3 +525,171 @@ html[data-theme="light"] .button-primary { color:#fff; }
     max-height: 400px;
   }
 }
+
+
+/* Round 2 final: Hero portrait scale correction */
+.hero-grid {
+  grid-template-columns: 1.18fr .82fr;
+  gap: 58px;
+}
+
+.hero-visual {
+  min-height: 500px;
+  align-items: center;
+}
+
+.portrait-frame {
+  width: min(360px, 84%);
+  padding: 11px;
+  border-radius: 26px;
+  transform: perspective(1200px) rotateY(-3deg) rotateX(1deg);
+}
+
+.hero-visual:hover .portrait-frame {
+  transform: perspective(1200px) rotateY(-1deg) rotateX(0deg) translateY(-3px);
+}
+
+.portrait-frame img {
+  width: 100%;
+  aspect-ratio: 1 / 1.06;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 18px;
+  filter: saturate(.98) contrast(1.045);
+}
+
+.portrait-topline {
+  padding: 0 3px 8px;
+  font-size: 8px;
+}
+
+.portrait-caption {
+  padding: 11px 4px 1px;
+}
+
+.portrait-caption strong {
+  font-size: 14px;
+}
+
+.orbit-a {
+  width: 455px;
+  height: 455px;
+}
+
+.orbit-b {
+  width: 375px;
+  height: 375px;
+}
+
+.floating-tag {
+  min-width: 102px;
+  padding: 11px 13px;
+  border-radius: 14px;
+}
+
+.floating-tag strong {
+  font-size: 20px;
+}
+
+.floating-tag small {
+  font-size: 9px;
+}
+
+.tag-one {
+  left: 1px;
+  top: 34%;
+}
+
+.tag-two {
+  right: 2px;
+  bottom: 17%;
+}
+
+@media (max-width: 1180px) and (min-width: 1051px) {
+  .hero-grid {
+    grid-template-columns: 1.14fr .86fr;
+    gap: 42px;
+  }
+
+  .hero-visual {
+    min-height: 470px;
+  }
+
+  .portrait-frame {
+    width: min(335px, 86%);
+  }
+
+  .orbit-a {
+    width: 425px;
+    height: 425px;
+  }
+
+  .orbit-b {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 460px;
+  }
+
+  .portrait-frame {
+    width: min(370px, 72%);
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-visual {
+    min-height: 410px;
+  }
+
+  .portrait-frame {
+    width: min(330px, 78vw);
+  }
+
+  .orbit-a {
+    width: 410px;
+    height: 410px;
+  }
+
+  .orbit-b {
+    width: 340px;
+    height: 340px;
+  }
+
+  .tag-one {
+    left: 2px;
+    top: 31%;
+  }
+
+  .tag-two {
+    right: 2px;
+    bottom: 13%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-visual {
+    min-height: 365px;
+  }
+
+  .portrait-frame {
+    width: min(300px, 80vw);
+  }
+
+  .orbit-a {
+    width: 360px;
+    height: 360px;
+  }
+
+  .orbit-b {
+    width: 300px;
+    height: 300px;
+  }
+}
